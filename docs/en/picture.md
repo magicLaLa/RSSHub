@@ -6,21 +6,41 @@ pageClass: routes
 
 ## 1X
 
-### Magazine
+### Photos
 
-<RouteEn author="emdoe" example="/1x/magazine" path="/1x/magazine"/>
+<RouteEn author="nczitzk" example="/1x/latest/all" path="/1x/:type?/:caty?" :paramsDesc="['sort type, `latest` by default, or `popular` or `curators-choice`', 'picture category, `all` by default, see below']">
 
-## Awesome Pigtails
+| Picture Category | Code          |
+| ---------------- | ------------- |
+| All categories   | all           |
+| Abstract         | abstract      |
+| Action           | action        |
+| Animals          | animals       |
+| Architecture     | architecture  |
+| Conceptual       | conceptual    |
+| Creative edit    | creative-edit |
+| Documentary      | documentary   |
+| Everyday         | everyday      |
+| Fine Art Nude    | fine-art-nude |
+| Humour           | humour        |
+| Landscape        | landscape     |
+| Macro            | macro         |
+| Mood             | mood          |
+| Night            | night         |
+| Performance      | performance   |
+| Portrait         | portrait      |
+| Still life       | still-life    |
+| Street           | street        |
+| Underwater       | underwater    |
+| Wildlife         | wildlife      |
 
-### New
-
-<RouteEn author="Chingyat" example="/pigtails" path="/pigtails/index"/>
+</RouteEn>
 
 ## Bing Wallpaper
 
 ### Daily Wallpaper
 
-<RouteEn author="FHYunCai" example="/bing" path="/bing" radar="1"/>
+<RouteEn author="FHYunCai" example="/bing" path="/bing" radar="1" rssbud="1"/>
 
 ## Dilbert Comic Strip
 
@@ -31,6 +51,12 @@ pageClass: routes
 ### Update
 
 <RouteEn author="xyqfer" example="/google/doodles/zh-CN" path="/google/doodles/:language?" :paramsDesc="['Language, default to `zh-CN`, for other language values, you can get it from [Google Doodles official website](https://www.google.com/doodles)']" />
+
+## Google Photos
+
+### Public Albums
+
+<RouteEn author="hoilc" example="/google/album/msFFnAzKmQmWj76EA" path="/google/album/:id" :paramsDesc="['album ID, can be found in URL, for example, `https://photos.app.goo.gl/msFFnAzKmQmWj76EA` to `msFFnAzKmQmWj76EA`']" radar="1"/>
 
 ## Konachan Anime Wallpapers
 
@@ -55,15 +81,31 @@ For example:
 
 </RouteEn>
 
+## LoveHeaven
+
+### Manga Updates
+
+<RouteEn author="hoilc" example="/loveheaven/update/kimetsu-no-yaiba" path="/loveheaven/update/:slug" :paramsDesc="['Manga slug, can be found in URL, including neither `manga-` nor `.html`']" />
+
+## NASA Astronomy Picture of the Day
+
+### NASA
+
+<RouteEn author="nczitzk" example="/nasa/apod" path="/nasa/apod" />
+
+### Cheng Kung University Mirror
+
+<RouteEn author="nczitzk" example="/nasa/apod-ncku" path="/nasa/apod-ncku" />
+
 ## nHentai
 
 ### Filter
 
-<RouteEn author="MegrezZhu" example="/nhentai/language/chinese" path="/nhentai/:key/:keyword/:mode?" :paramsDesc="['Filter term, can be: parody, character, tag, artist, group, language, category','Filter value', 'mode, `simple` to only cover，`detail` to all content, default to `simple`']" anticrawler="1" />
+<RouteEn author="MegrezZhu hoilc" example="/nhentai/language/chinese" path="/nhentai/:key/:keyword/:mode?" :paramsDesc="['Filter term, can be: parody, character, tag, artist, group, language, category','Filter value', 'mode, `simple` to only cover，`detail` to all content, `torrent` to include Magnet URI, need login, refer to [Route-specific Configurations](/en/install/#route-specific-configurations), default to `simple`']" anticrawler="1" supportBT="1" />
 
 ### Advanced Search
 
-<RouteEn author="MegrezZhu" example="/nhentai/search/language%3Ajapanese+-scat+-yaoi+-guro+-%22mosaic+censorship%22" path="/nhentai/search/:keyword/:mode?" :paramsDesc="['Keywords for search. You can copy the content after `q=` after searching on the original website, or you can enter it directly. See the [official website](https://nhentai.net/info/) for details', 'mode, `simple` to only cover，`detail` to all content, default to `simple`']" anticrawler="1"/>
+<RouteEn author="MegrezZhu hoilc" example="/nhentai/search/language%3Ajapanese+-scat+-yaoi+-guro+-%22mosaic+censorship%22" path="/nhentai/search/:keyword/:mode?" :paramsDesc="['Keywords for search. You can copy the content after `q=` after searching on the original website, or you can enter it directly. See the [official website](https://nhentai.net/info/) for details', 'mode, `simple` to only cover，`detail` to all content, `torrent` to include Magnet URI, need login, refer to [Route-specific Configurations](/en/install/#route-specific-configurations), default to `simple`']" anticrawler="1" supportBT="1"/>
 
 ## Tits Guru
 
